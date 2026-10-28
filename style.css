@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('PixelEmulator-xq08.ttf') format('truetype');
+}
+body{
+    text-align: center;
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-family: 'MyFont', sans-serif;
+    padding: 20px;
+    color: hotpink;
+    font-size: 90px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+}
+h1:hover{
+    color: lightblue;
+    filter: blur(2px);
+    
+}
+h2{
+    border-top: 5px dotted hotpink;
+    padding:20px;
+    font-family: 'MyFont', sans-serif;
+    font-size:18px;
+
+}
+.container{
+    overflow: hidden;
+    width: 100%;
+    background-color: rgb(78, 253, 78);
+    font-family: 'MyFont', sans-serif;
+    margin-bottom: 50px;
+}
+.track{
+    display: flex;
+    animation: scrollContinuous 10s linear infinite;
+}
+.text{
+    padding: 10px;
+    white-space: nowrap;
+}
+@keyframes scrollContinuous{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}
+.photo-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 200px );
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 10px;
+  justify-content: center;
+  row-gap: 8px;
+  width: 100%;
+  margin: 0 auto;
+   
+}
+.photo-item:nth-child(odd){
+   border: 3px solid hotpink;
+   width: 200px;
+   aspect-ratio: 1 / 1;
+}
+.photo-item:nth-child(even){
+   border: 3px solid rgb(78, 253, 78);
+   width: 200px;
+   aspect-ratio: 1 / 1;
+}
+.photo-item img{
+   width: 70%;
+   height: 70%;
+   object-fit: cover;
+   padding: 30px;
+}   
+.photo-item img:hover{
+   transform: scale(1.1);
+   transition: transform 0.3s ease;
+   filter:  blur(1px);
+   filter: blur(1px) drop-shadow(0 0 30px rgba(237, 114, 178, 0.9));
+}
+ 
+.dec-grid{
+    display: grid;
+    grid-template-columns: repeat(11, 100px);
+    gap: 5px;
+    justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+    
+}
+.dec-item:nth-child(odd){
+
+    background-color: hotpink;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'MyFont', sans-serif;
+    aspect-ratio: 1 / 1;
+    font-size: 18px;
+     font-size: 70px;
+    align-content:space-around;
+}
+.dec-item:nth-child(even){
+    background-color: rgb(78, 253, 78);
+    color: black;
+    text-align: center;
+    line-height: 50px;
+    font-family: 'MyFont', sans-serif;
+    aspect-ratio: 1 / 1;
+    font-size: 70px;
+    align-content:space-around;
+}
+
+.de-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    gap: 5px;
+    width: 100%;
+    margin: 0 auto;
+   justify-content: center;
+}
+.de-item:nth-child(odd){
+    background-color: hotpink;
+    color: white;
+    text-align: center;
+    font-family: 'MyFont', sans-serif;
+    aspect-ratio: 1 / 1;
+    font-size: 70px;
+    align-content:space-around;
+}
+.de-item:nth-child(even){
+    background-color: rgb(78, 253, 78);
+    color: black;
+    text-align: center;
+    font-family: 'MyFont', sans-serif;
+    aspect-ratio: 1 / 1;
+    font-size: 70px;
+    align-content:space-around;
+}
+.charm-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 100px 230px 230px 100px;
+    gap: 10px;
+    justify-content: center;
+    width: 900px;
+    margin:50px auto;
+}
+.top{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.left-top{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.left-bottom{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.main{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.bottom{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.box{
+    border-radius: 10px;
+    background-color: hotpink;
+    border: 3px dotted white;
+}
+.box.main{
+    font-size: 13.5px;
+    padding: 20px;
+    line-height: 1.5;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    align-content: space-around;
+    font-weight: 300;
+}
+.box.left-top img{
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 10px;
+    align-content: space-around;
+}
+.box.top{
+    font-size: 36px;
+    text-align: center;
+    line-height: 100px;
+    font-family: 'MyFont', sans-serif;
+    color: white;
+    align-content: space-around;
+}
+.box.left-bottom{
+    font-size: 24px;
+    text-align: center;
+    line-height: 230px;
+    font-family: 'MyFont', sans-serif;
+    color: white;
+    align-content: space-around;
+}
+.box.bottom{
+    font-size: 24px;
+    text-align: center;
+    line-height: 100px;
+    font-family: 'MyFont', sans-serif;
+    color: white;
+    align-content: space-around;
+}
